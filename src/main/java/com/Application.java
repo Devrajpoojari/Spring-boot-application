@@ -20,5 +20,12 @@ public class Application {
 
 		return new ResponseEntity<String>("<h1 style='color:red;'>Hello Yogee </h1> ", HttpStatus.OK);
 	}
+	
+	@GetMapping("/hi")
+	public ResponseEntity<String> get() {
+
+		return new ResponseEntity<String>("<h1 style='color:red;'>Good morning .........</h1> ", HttpStatus.OK);
+	}
+	
 
 }
