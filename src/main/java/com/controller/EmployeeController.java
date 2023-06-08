@@ -32,7 +32,9 @@ public class EmployeeController {
 	@PostMapping("/add")
 	public Employee add(@Valid @RequestBody Employee employee) {
 	
-		return employeeService.addEmployee(employee);
+		Employee e= employeeService.addEmployee(employee);
+		System.out.println(e);
+		return e;
 	}
 
 	@GetMapping("/get-all")

@@ -36,8 +36,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee updateEmployee(Employee employee) throws ResourceNotFoundException {
-		Employee e = employeeRepo.findById(employee.geteId())
-				.orElseThrow(() -> new ResourceNotFoundException("Employee Not Fount with Id :" + employee.geteId()));
+		Employee e = employeeRepo.findById(employee.getEId())
+				.orElseThrow(() -> new ResourceNotFoundException("Employee Not Fount with Id :" + employee.getEId()));
 		employeeRepo.delete(e);
 		return employeeRepo.save(employee);
 		
